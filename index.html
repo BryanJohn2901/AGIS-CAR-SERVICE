@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGIS CAR SERVICE | Centro Automotivo no Batel, Curitiba</title>
+    <link rel="icon" type="image/jpeg" href="assets/favicon.jpeg">
+    <meta name="description" content="Centro automotivo no Batel, Curitiba. Serviço especializado para carros nacionais e importados, com atendimento humanizado e estrutura completa.">
+    <link rel="canonical" href="https://www.agis-car-service.com.br/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        'gold-hover': '#FFE534',
+                        'site-black': '#000000',
+                        'site-dark': '#111111',
+                        'site-card': '#000000',
+                        'site-deep': '#111111',
+                        'site-border': '#111111',
+                        'site-muted': '#888888',
+                        'site-text': '#F0EDE8',
+                    },
+                    fontFamily: {
+                        display: ['Big Shoulders Display', 'sans-serif'],
+                        body: ['DM Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link.active {
+            color: #FFD700;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 2px;
+        }
+        #header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        #header.scrolled {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            box-shadow: 0 2px 28px rgba(0, 0, 0, 0.15);
+        }
+        .gallery-mosaic {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 250px);
+            gap: 12px;
+        }
+        .item-1 { grid-column: 1 / 2; grid-row: 1 / 3; }
+        .item-2 { grid-column: 2 / 4; grid-row: 1 / 2; }
+        .item-3 { grid-column: 2 / 3; grid-row: 2 / 3; }
+        .item-4 { grid-column: 3 / 4; grid-row: 2 / 3; }
+        @media (max-width: 992px) {
+            .gallery-mosaic {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+            .item-1 { grid-column: 1 / 3; grid-row: 1 / 2; height: 280px; }
+            .item-2 { grid-column: 1 / 2; grid-row: 2 / 3; height: 200px; }
+            .item-3 { grid-column: 2 / 3; grid-row: 2 / 3; height: 200px; }
+            .item-4 { grid-column: 1 / 3; grid-row: 3 / 4; height: 200px; }
+        }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "AGIS CAR SERVICE",
+      "image": "https://www.agis-car-service.com.br/assets/logo.png",
+      "url": "https://www.agis-car-service.com.br/",
+      "telephone": "+5541987065961",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Gonçalves Dias, 110",
+        "addressLocality": "Curitiba",
+        "addressRegion": "PR",
+        "postalCode": "80240-340",
+        "addressCountry": "BR"
+      }
+    }
+    </script>
+</head>
+<body class="bg-site-dark text-site-text overflow-x-hidden font-body">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 py-5 transition-all duration-300">
+        <div class="max-w-[1300px] mx-auto px-5 flex justify-between items-center">
+
+            <div class="flex items-center gap-4">
+                <img src="assets/logo.png" alt="AGIS CAR SERVICE" class="h-10 md:h-12 object-contain rounded-md">
+                <span class="hidden md:block font-body text-[10px] text-gray-700 tracking-widest uppercase mt-1"><i class="fa-solid fa-location-dot text-gold mr-1"></i> Rua Gonçalves Dias, 110 — Batel</span>
+            </div>
+
+            <nav class="hidden lg:flex gap-8">
+                <a href="#hero"       class="nav-link font-body font-semibold text-[0.7rem] uppercase tracking-[0.14em] text-black hover:text-gold transition-colors duration-300">Início</a>
+                <a href="#servicos"   class="nav-link font-body font-semibold text-[0.7rem] uppercase tracking-[0.14em] text-black hover:text-gold transition-colors duration-300">Serviços</a>
+                <a href="#avaliacoes" class="nav-link font-body font-semibold text-[0.7rem] uppercase tracking-[0.14em] text-black hover:text-gold transition-colors duration-300">Avaliações</a>
+                <a href="#quem-somos" class="nav-link font-body font-semibold text-[0.7rem] uppercase tracking-[0.14em] text-black hover:text-gold transition-colors duration-300">Quem Somos</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="tel:+5541987065961" class="hidden lg:inline-block font-body font-semibold text-[0.7rem] uppercase tracking-wide border border-gray-300 text-gray-700 px-4 py-2.5 rounded-md hover:border-gold hover:text-black hover:bg-gold transition-all duration-300">(41) 98706-5961</a>
+                <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento." target="_blank" class="inline-block font-body font-semibold text-[0.7rem] uppercase tracking-wide bg-gold text-black px-5 py-2.5 rounded-md shadow-[0_0_20px_rgba(255,215,0,0.18)] hover:bg-gold-hover transition-all duration-300 wa-link" data-wa="contato-header">Falar com Atendente <i class="fa-brands fa-whatsapp ml-1"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="relative min-h-screen flex flex-col justify-end bg-[url('assets/hero-mechanics.png')] bg-cover bg-center bg-fixed pb-20 md:pb-28 pt-24">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/25"></div>
+
+        <!-- Signature: ghost watermark -->
+        <div class="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none select-none">
+            <span class="font-display font-extrabold text-white leading-none" style="font-size: 29vw; opacity: 0.035; letter-spacing: -0.03em;">BATEL</span>
+        </div>
+
+        <div class="relative z-10 max-w-[1300px] mx-auto px-5 w-full">
+            <span class="block font-body font-semibold text-gold tracking-[0.25em] text-[0.65rem] uppercase mb-5">BEM-VINDO À AGIS CAR SERVICE</span>
+            <h1 class="font-display font-extrabold text-site-text uppercase leading-[0.88] mb-7" style="font-size: clamp(2.8rem, 7.5vw, 6.5rem);">
+                CENTRO AUTOMOTIVO<br>NO <span class="text-gold">BATEL,</span><br>EM CURITIBA
+            </h1>
+            <p class="font-body text-site-muted text-base md:text-[1.05rem] max-w-md mb-10 leading-relaxed">
+                Serviço especializado para carros nacionais e importados, com atendimento humano e estrutura completa. Cuidamos do seu veículo com a atenção que ele merece.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#servicos" class="inline-block text-center font-body font-semibold text-xs uppercase tracking-wide bg-gold text-black px-8 py-4 rounded-md shadow-[0_0_32px_rgba(255,215,0,0.22)] hover:bg-gold-hover transition-all duration-300">Ver Serviços</a>
+                <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento." target="_blank" class="inline-block text-center font-body font-semibold text-xs uppercase tracking-wide border-2 border-gold text-gold px-8 py-4 rounded-md hover:bg-gold hover:text-black transition-all duration-300 wa-link" data-wa="hero">Falar com Atendente <i class="fa-brands fa-whatsapp ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Strip — signature element -->
+    <div class="bg-site-black border-y border-site-border">
+        <div class="max-w-[1300px] mx-auto grid grid-cols-3 divide-x divide-site-border">
+            <div class="py-9 md:py-11 px-4 md:px-10 text-center">
+                <div class="font-display font-extrabold text-gold leading-none text-[2.6rem] md:text-[3.8rem]">15+</div>
+                <div class="font-body text-site-muted text-[0.6rem] uppercase tracking-[0.2em] mt-2">Anos de Estrada</div>
+            </div>
+            <div class="py-9 md:py-11 px-4 md:px-10 text-center">
+                <div class="font-display font-extrabold text-gold leading-none text-[2.6rem] md:text-[3.8rem]">196</div>
+                <div class="font-body text-site-muted text-[0.6rem] uppercase tracking-[0.2em] mt-2">Avaliações Google</div>
+            </div>
+            <div class="py-9 md:py-11 px-4 md:px-10 text-center">
+                <div class="font-display font-extrabold text-gold leading-none text-[2.6rem] md:text-[3.8rem]">4.5<i class="fa-solid fa-star"></i></div>
+                <div class="font-body text-site-muted text-[0.6rem] uppercase tracking-[0.2em] mt-2">Nota Média</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-24 md:py-32 bg-site-dark">
+        <div class="max-w-[1300px] mx-auto px-5">
+
+            <div class="flex items-stretch gap-4 mb-14">
+                <div class="w-[3px] bg-gold rounded-full flex-shrink-0"></div>
+                <h2 class="font-display font-extrabold uppercase leading-tight text-[2.2rem] md:text-[2.8rem]">SERVIÇOS ESPECIALIZADOS</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+
+                <div class="bg-site-card border border-site-border border-t-2 border-t-gold rounded-md overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
+                    <div class="h-[170px] bg-site-deep bg-cover bg-center" style="background-image: url('assets/serv_oleo.png');"></div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-bold text-gold uppercase text-[1.2rem] mb-2">Troca de Óleo</h3>
+                        <p class="font-body text-site-muted text-sm leading-relaxed mb-5 flex-1">Troca de óleo e filtros com produtos de linha, no prazo certo para o seu motor.</p>
+                        <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20para%20o%20servi%C3%A7o%20de%20Troca%20de%20%C3%93leo." target="_blank" class="wa-link font-body font-semibold text-site-text text-[0.7rem] uppercase tracking-wide border-b border-gold pb-0.5 self-start hover:text-gold transition-colors duration-300" data-wa="Troca de Óleo">Fale conosco <i class="fa-brands fa-whatsapp ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-site-card border border-site-border border-t-2 border-t-gold rounded-md overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
+                    <div class="h-[170px] bg-site-deep bg-cover bg-center" style="background-image: url('assets/serv_revisao.png');"></div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-bold text-gold uppercase text-[1.2rem] mb-2">Revisão Completa</h3>
+                        <p class="font-body text-site-muted text-sm leading-relaxed mb-5 flex-1">Checagem completa do veículo para você rodar com segurança e sem surpresas.</p>
+                        <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20para%20o%20servi%C3%A7o%20de%20Revis%C3%A3o%20Completa." target="_blank" class="wa-link font-body font-semibold text-site-text text-[0.7rem] uppercase tracking-wide border-b border-gold pb-0.5 self-start hover:text-gold transition-colors duration-300" data-wa="Revisão Completa">Fale conosco <i class="fa-brands fa-whatsapp ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-site-card border border-site-border border-t-2 border-t-gold rounded-md overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
+                    <div class="h-[170px] bg-site-deep bg-cover bg-center" style="background-image: url('assets/serv_freios.png');"></div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-bold text-gold uppercase text-[1.2rem] mb-2">Freios</h3>
+                        <p class="font-body text-site-muted text-sm leading-relaxed mb-5 flex-1">Revisão e troca de discos, pastilhas e fluido para uma frenagem segura.</p>
+                        <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20para%20o%20servi%C3%A7o%20de%20Freios." target="_blank" class="wa-link font-body font-semibold text-site-text text-[0.7rem] uppercase tracking-wide border-b border-gold pb-0.5 self-start hover:text-gold transition-colors duration-300" data-wa="Freios">Fale conosco <i class="fa-brands fa-whatsapp ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-site-card border border-site-border border-t-2 border-t-gold rounded-md overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
+                    <div class="h-[170px] bg-site-deep bg-cover bg-center" style="background-image: url('assets/serv_suspensao.png');"></div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-bold text-gold uppercase text-[1.2rem] mb-2">Suspensão</h3>
+                        <p class="font-body text-site-muted text-sm leading-relaxed mb-5 flex-1">Mais conforto, estabilidade e segurança na direção do seu carro.</p>
+                        <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20para%20o%20servi%C3%A7o%20de%20Suspens%C3%A3o." target="_blank" class="wa-link font-body font-semibold text-site-text text-[0.7rem] uppercase tracking-wide border-b border-gold pb-0.5 self-start hover:text-gold transition-colors duration-300" data-wa="Suspensão">Fale conosco <i class="fa-brands fa-whatsapp ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-site-card border border-site-border border-t-2 border-t-gold rounded-md overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
+                    <div class="h-[170px] bg-site-deep bg-cover bg-center" style="background-image: url('assets/serv_alinhamento.png');"></div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-bold text-gold uppercase text-[1.2rem] mb-2">Alinhamento</h3>
+                        <p class="font-body text-site-muted text-sm leading-relaxed mb-5 flex-1">Geometria correta para o carro rodar estável e sem desgaste irregular.</p>
+                        <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20para%20o%20servi%C3%A7o%20de%20Alinhamento." target="_blank" class="wa-link font-body font-semibold text-site-text text-[0.7rem] uppercase tracking-wide border-b border-gold pb-0.5 self-start hover:text-gold transition-colors duration-300" data-wa="Alinhamento">Fale conosco <i class="fa-brands fa-whatsapp ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-site-card border border-site-border border-t-2 border-t-gold rounded-md overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
+                    <div class="h-[170px] bg-site-deep bg-cover bg-center" style="background-image: url('assets/serv_balanceamento.png');"></div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-bold text-gold uppercase text-[1.2rem] mb-2">Balanceamento</h3>
+                        <p class="font-body text-site-muted text-sm leading-relaxed mb-5 flex-1">Rodas equilibradas, direção firme e sem trepidação.</p>
+                        <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20para%20o%20servi%C3%A7o%20de%20Balanceamento." target="_blank" class="wa-link font-body font-semibold text-site-text text-[0.7rem] uppercase tracking-wide border-b border-gold pb-0.5 self-start hover:text-gold transition-colors duration-300" data-wa="Balanceamento">Fale conosco <i class="fa-brands fa-whatsapp ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-site-card border border-site-border border-t-2 border-t-gold rounded-md overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
+                    <div class="h-[170px] bg-site-deep bg-cover bg-center" style="background-image: url('assets/serv_arrefecimento.png');"></div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-bold text-gold uppercase text-[1.2rem] mb-2">Sistema de Arrefecimento</h3>
+                        <p class="font-body text-site-muted text-sm leading-relaxed mb-5 flex-1">Troca de fluido, sangria e revisão completa do sistema de arrefecimento.</p>
+                        <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20para%20o%20servi%C3%A7o%20de%20Sistema%20de%20Arrefecimento." target="_blank" class="wa-link font-body font-semibold text-site-text text-[0.7rem] uppercase tracking-wide border-b border-gold pb-0.5 self-start hover:text-gold transition-colors duration-300" data-wa="Sistema de Arrefecimento">Fale conosco <i class="fa-brands fa-whatsapp ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-site-card border border-site-border border-t-2 border-t-gold rounded-md overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
+                    <div class="h-[170px] bg-site-deep bg-cover bg-center" style="background-image: url('assets/serv_mecanica.png');"></div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-bold text-gold uppercase text-[1.2rem] mb-2">Mecânica Geral e Multimarcas</h3>
+                        <p class="font-body text-site-muted text-sm leading-relaxed mb-5 flex-1">Manutenção de nacionais e importados, incluindo BMW, Audi, Mercedes e Volkswagen.</p>
+                        <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20para%20o%20servi%C3%A7o%20de%20Mec%C3%A2nica%20Geral%20e%20Multimarcas." target="_blank" class="wa-link font-body font-semibold text-site-text text-[0.7rem] uppercase tracking-wide border-b border-gold pb-0.5 self-start hover:text-gold transition-colors duration-300" data-wa="Mecânica Geral e Multimarcas">Fale conosco <i class="fa-brands fa-whatsapp ml-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center">
+                <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="inline-block font-body font-semibold text-xs uppercase tracking-wide bg-gold text-black px-8 py-4 rounded-md shadow-[0_0_24px_rgba(255,215,0,0.15)] hover:bg-gold-hover transition-all duration-300 wa-link" data-wa="Mais informações sobre os serviços">Entrar em Contato <i class="fa-brands fa-whatsapp ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avaliações -->
+    <section id="avaliacoes" class="py-24 md:py-32 bg-site-black">
+        <div class="max-w-[1300px] mx-auto px-5">
+            <div class="flex items-stretch gap-4 mb-3">
+                <div class="w-[3px] bg-gold rounded-full flex-shrink-0"></div>
+                <h2 class="font-display font-extrabold uppercase leading-tight text-[2.2rem] md:text-[2.8rem]">O QUE NOSSOS CLIENTES DIZEM</h2>
+            </div>
+            <p class="font-body text-site-muted text-sm ml-[19px] mb-12">Mais de 196 avaliações e nota 4.5 no Google. Confiança construída em cada atendimento.</p>
+
+            <div class="relative max-w-4xl mx-auto overflow-hidden mb-10 group" id="reviews-carousel">
+                <div class="flex transition-transform duration-500 ease-in-out" id="reviews-track">
+                    <div class="w-full flex-shrink-0 px-4 md:px-12">
+                        <div class="bg-site-card border border-site-border border-l-[3px] border-l-gold p-8 md:p-10 rounded-md shadow-lg text-center md:text-left h-full flex flex-col justify-center">
+                            <div class="text-gold tracking-widest text-lg mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="font-body text-site-text text-base md:text-lg leading-relaxed italic mb-6">"Excelente atendimento, oficina extremamente organizada. Levei minha BMW e fui super bem atendido. Recomendo muito!"</p>
+                            <strong class="font-body font-semibold text-gold uppercase tracking-wide text-sm">João M.</strong>
+                        </div>
+                    </div>
+                    <div class="w-full flex-shrink-0 px-4 md:px-12">
+                        <div class="bg-site-card border border-site-border border-l-[3px] border-l-gold p-8 md:p-10 rounded-md shadow-lg text-center md:text-left h-full flex flex-col justify-center">
+                            <div class="text-gold tracking-widest text-lg mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="font-body text-site-text text-base md:text-lg leading-relaxed italic mb-6">"A melhor oficina do Batel. Transparência do início ao fim e mecânicos que realmente entendem do que estão falando."</p>
+                            <strong class="font-body font-semibold text-gold uppercase tracking-wide text-sm">Carlos S.</strong>
+                        </div>
+                    </div>
+                    <div class="w-full flex-shrink-0 px-4 md:px-12">
+                        <div class="bg-site-card border border-site-border border-l-[3px] border-l-gold p-8 md:p-10 rounded-md shadow-lg text-center md:text-left h-full flex flex-col justify-center">
+                            <div class="text-gold tracking-widest text-lg mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="font-body text-site-text text-base md:text-lg leading-relaxed italic mb-6">"Serviço impecável. Fizeram a revisão completa do meu carro no prazo combinado. Ambiente premium e de muita confiança."</p>
+                            <strong class="font-body font-semibold text-gold uppercase tracking-wide text-sm">Mariana L.</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="prev-review" class="absolute top-1/2 left-0 -translate-y-1/2 bg-site-deep text-gold hover:bg-gold hover:text-black w-10 h-10 rounded-full flex items-center justify-center z-10 transition-colors shadow-lg border border-site-border opacity-70 group-hover:opacity-100 hidden md:flex" aria-label="Anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="next-review" class="absolute top-1/2 right-0 -translate-y-1/2 bg-site-deep text-gold hover:bg-gold hover:text-black w-10 h-10 rounded-full flex items-center justify-center z-10 transition-colors shadow-lg border border-site-border opacity-70 group-hover:opacity-100 hidden md:flex" aria-label="Próximo">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                
+                <div class="flex justify-center gap-3 mt-6" id="reviews-dots"></div>
+            </div>
+
+            <div class="text-center space-y-5">
+                <div>
+                    <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20para%20agendar%20um%20hor%C3%A1rio." target="_blank" class="inline-block font-body font-semibold text-xs uppercase tracking-wide bg-gold text-black px-8 py-4 rounded-md shadow-[0_0_24px_rgba(255,215,0,0.15)] hover:bg-gold-hover transition-all duration-300 wa-link" data-wa="Agendar um horário">Agendar um Horário <i class="fa-brands fa-whatsapp ml-2"></i></a>
+                </div>
+                <div>
+                    <a href="#" class="font-body text-gold text-sm font-semibold underline underline-offset-4 hover:text-gold-hover transition-colors duration-300">Ver avaliações no Google</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="py-24 md:py-32 bg-site-dark">
+        <div class="max-w-[1300px] mx-auto px-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="flex items-stretch gap-4 mb-6">
+                        <div class="w-[3px] bg-gold rounded-full flex-shrink-0"></div>
+                        <h2 class="font-display font-extrabold uppercase leading-tight text-[2.2rem] md:text-[2.8rem]">QUEM SOMOS</h2>
+                    </div>
+                    <h3 class="font-body font-semibold text-gold text-base md:text-lg mb-6 leading-snug">Mais segurança e confiança em cada quilômetro rodado.</h3>
+                    <p class="font-body text-site-muted text-sm leading-relaxed mb-4">A AGIS CAR SERVICE é um centro automotivo no Batel, em Curitiba, com mais de 15 anos de estrada cuidando de carros nacionais e importados. Crescemos investindo em estrutura, equipamentos e em uma equipe técnica preparada para entregar serviço de qualidade, do mais simples ao mais exigente.</p>
+                    <p class="font-body text-site-muted text-sm leading-relaxed mb-8">Nosso atendimento é 100% humanizado. Você fala direto com quem entende de carro, com clareza e orientação em cada etapa, do orçamento à entrega. Atendemos das marcas populares às importadas, com o mesmo cuidado e atenção. Na AGIS, tratamos o seu veículo como se fosse o nosso.</p>
+                    <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento." target="_blank" class="inline-block font-body font-semibold text-xs uppercase tracking-wide bg-gold text-black px-8 py-4 rounded-md shadow-[0_0_24px_rgba(255,215,0,0.15)] hover:bg-gold-hover transition-all duration-300 wa-link" data-wa="Entrar em contato sobre a oficina">Falar com Atendente <i class="fa-brands fa-whatsapp ml-2"></i></a>
+                </div>
+                <div class="h-[460px] bg-site-deep rounded-md bg-cover bg-center" style="background-image: url('assets/asset%2037.jpeg');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="py-24 md:py-32 bg-site-black">
+        <div class="max-w-[1300px] mx-auto px-5">
+            <div class="flex items-stretch gap-4 mb-14">
+                <div class="w-[3px] bg-gold rounded-full flex-shrink-0"></div>
+                <h2 class="font-display font-extrabold uppercase leading-tight text-[2.2rem] md:text-[2.8rem]">Nossa Estrutura</h2>
+            </div>
+            <div class="gallery-mosaic">
+                <div class="item-1 bg-site-deep rounded-md bg-cover bg-center transition-transform duration-300 hover:scale-[1.02] hover:z-10" style="background-image: url('assets/asset%2050.jpeg');"></div>
+                <div class="item-2 bg-site-deep rounded-md bg-cover bg-center transition-transform duration-300 hover:scale-[1.02] hover:z-10" style="background-image: url('assets/asset%2029.jpeg');"></div>
+                <div class="item-3 bg-site-deep rounded-md bg-cover bg-center transition-transform duration-300 hover:scale-[1.02] hover:z-10" style="background-image: url('assets/asset%2025.jpeg');"></div>
+                <div class="item-4 bg-site-deep rounded-md bg-cover bg-center transition-transform duration-300 hover:scale-[1.02] hover:z-10" style="background-image: url('assets/asset%2027.jpeg');"></div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="inline-block font-body font-semibold text-xs uppercase tracking-wide bg-gold text-black px-8 py-4 rounded-md shadow-[0_0_24px_rgba(255,215,0,0.15)] hover:bg-gold-hover transition-all duration-300 wa-link" data-wa="Informações sobre a estrutura">Falar com Atendente <i class="fa-brands fa-whatsapp ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="py-24 md:py-32 bg-site-dark">
+        <div class="max-w-[1300px] mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="p-8 bg-site-card border border-site-border rounded-md">
+                    <div class="text-3xl mb-6"><i class="fa-regular fa-comments"></i></div>
+                    <h3 class="font-display font-bold text-gold uppercase text-[1.15rem] mb-3">Atendimento 100% humanizado</h3>
+                    <p class="font-body text-site-muted text-sm leading-relaxed">Você fala direto com quem entende do assunto. Sem robô e sem repetir as mesmas informações a cada mensagem. Orçamento ágil e atendimento de confiança.</p>
+                </div>
+                <div class="p-8 bg-site-card border border-site-border rounded-md">
+                    <div class="text-3xl mb-6"><i class="fa-solid fa-car-side"></i></div>
+                    <h3 class="font-display font-bold text-gold uppercase text-[1.15rem] mb-3">Especialistas em importados</h3>
+                    <p class="font-body text-site-muted text-sm leading-relaxed">Estrutura e equipe preparadas para BMW, Audi, Mercedes e Volkswagen, com o mesmo padrão de qualidade em qualquer marca.</p>
+                </div>
+                <div class="p-8 bg-site-card border border-site-border rounded-md">
+                    <div class="text-3xl mb-6"><i class="fa-solid fa-wrench"></i></div>
+                    <h3 class="font-display font-bold text-gold uppercase text-[1.15rem] mb-3">Estrutura completa no Batel</h3>
+                    <p class="font-body text-site-muted text-sm leading-relaxed">Equipamentos próprios para alinhamento, balanceamento e toda a parte de mecânica, reunindo seus serviços em um só lugar.</p>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="inline-block font-body font-semibold text-xs uppercase tracking-wide bg-gold text-black px-8 py-4 rounded-md shadow-[0_0_24px_rgba(255,215,0,0.15)] hover:bg-gold-hover transition-all duration-300 wa-link" data-wa="Informações dos serviços">Falar com Atendente <i class="fa-brands fa-whatsapp ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização -->
+    <section id="localizacao" class="py-24 md:py-32 bg-site-black">
+        <div class="max-w-[1300px] mx-auto px-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="flex items-stretch gap-4 mb-8">
+                        <div class="w-[3px] bg-gold rounded-full flex-shrink-0"></div>
+                        <h2 class="font-display font-extrabold uppercase leading-tight text-[2.2rem] md:text-[2.8rem]">Localização e Horário</h2>
+                    </div>
+                    <ul class="space-y-7 list-none p-0">
+                        <li>
+                            <span class="font-body font-semibold text-gold text-[0.65rem] uppercase tracking-[0.18em] block mb-1.5"><i class="fa-solid fa-location-dot text-gold mr-1"></i> Endereço</span>
+                            <span class="font-body text-site-text text-base">Rua Gonçalves Dias, 110 — Batel, Curitiba</span>
+                        </li>
+                        <li>
+                            <span class="font-body font-semibold text-gold text-[0.65rem] uppercase tracking-[0.18em] block mb-1.5">🕒 Horário de atendimento</span>
+                            <span class="font-body text-site-text text-base block">Segunda a Sexta: 08:00 às 18:00</span>
+                            <span class="font-body text-site-text text-base block">Sábado: 08:00 às 12:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <iframe src="https://maps.google.com/maps?q=AGIS%20CAR%20SERVICE%20Batel%20Curitiba&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="360" class="border-0 rounded-md shadow-[0_8px_40px_rgba(0,0,0,0.6)]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da AGIS CAR SERVICE no Batel"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-site-black border-t-2 border-gold pt-20 pb-8">
+        <div class="max-w-[1300px] mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-12 mb-14">
+                <div>
+                    <img src="assets/logo.png" alt="AGIS CAR SERVICE" class="h-14 object-contain mb-4 rounded-md">
+                    <p class="font-body text-site-muted text-sm mb-6">Centro automotivo premium no Batel, Curitiba.</p>
+                    <div class="inline-flex items-center gap-2 bg-site-deep border border-site-border px-4 py-2.5 rounded-md text-sm font-body font-semibold">
+                        <span class="text-gold"><i class="fa-solid fa-star"></i></span><span class="text-site-text">4.5 · 196 avaliações Google</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-gold uppercase tracking-wide text-base mb-5">Contato</h3>
+                    <p class="font-body text-site-muted text-sm mb-2">WhatsApp: (41) 98706-5961</p>
+                    <p class="font-body text-site-muted text-sm mb-2">Telefone: (41) 98706-5961</p>
+                    <p class="font-body text-site-muted text-sm">Rua Gonçalves Dias, 110<br>Batel, Curitiba</p>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-gold uppercase tracking-wide text-base mb-5">Redes Sociais</h3>
+                    <a href="#" class="font-body text-site-muted text-sm block mb-2 hover:text-gold transition-colors duration-300">Instagram da AGIS</a>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-site-border text-center">
+                <p class="font-body text-[#444] text-xs tracking-wide">&copy; 2026 AGIS CAR SERVICE. Todos os direitos reservados. Desenvolvido por <span class="text-site-muted">Conceito Prime</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento." target="_blank" class="fixed bottom-7 right-7 bg-[#25D366] w-14 h-14 rounded-full flex justify-center items-center shadow-[0_4px_20px_rgba(0,0,0,0.4)] z-50 hover:scale-110 hover:bg-[#22C35E] transition-all duration-300 wa-link" data-wa="Atendimento">
+        <i class="fa-brands fa-whatsapp text-3xl text-white"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>
