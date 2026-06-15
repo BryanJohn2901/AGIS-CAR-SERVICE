@@ -8,6 +8,7 @@
     <meta name="description" content="Centro automotivo no Batel, Curitiba. Serviço especializado para carros nacionais e importados, com atendimento humanizado e estrutura completa.">
     <link rel="canonical" href="https://www.agis-car-service.com.br/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/reviews-carousel.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -256,38 +257,50 @@
     </section>
 
     <!-- Avaliações -->
-    <section id="avaliacoes" class="py-24 md:py-32 bg-site-black">
+    <section id="avaliacoes" class="py-24 md:py-32 bg-site-black" aria-labelledby="avaliacoes-titulo">
         <div class="max-w-[1300px] mx-auto px-5">
-            <div class="flex items-stretch gap-4 mb-3">
-                <div class="w-[3px] bg-gold rounded-full flex-shrink-0"></div>
-                <h2 class="font-display font-extrabold uppercase leading-tight text-[2.2rem] md:text-[2.8rem]">O QUE NOSSOS CLIENTES DIZEM</h2>
-            </div>
-            <p class="font-body text-site-muted text-sm ml-[19px] mb-12">Mais de 196 avaliações e nota 4.5 no Google. Confiança construída em cada atendimento.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                <div class="bg-site-card border border-site-border border-l-[3px] border-l-gold p-8 rounded-md shadow-lg text-center md:text-left h-full flex flex-col">
-                    <div class="text-gold tracking-widest text-lg mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="font-body text-site-text text-base leading-relaxed italic mb-6 flex-grow">"Excelente atendimento, oficina extremamente organizada. Levei minha BMW e fui super bem atendido. Recomendo muito!"</p>
-                    <strong class="font-body font-semibold text-gold uppercase tracking-wide text-sm">João M.</strong>
+            <div class="text-center mb-10 md:mb-14">
+                <p class="font-body font-semibold text-gold text-[0.65rem] uppercase tracking-[0.22em] mb-3">Avaliações</p>
+                <div class="flex items-stretch gap-4 justify-center mb-4">
+                    <div class="w-[3px] bg-gold rounded-full flex-shrink-0 hidden sm:block"></div>
+                    <h2 id="avaliacoes-titulo" class="font-display font-extrabold uppercase leading-tight text-[2.2rem] md:text-[2.8rem] text-site-text">O Que Nossos Clientes Dizem</h2>
+                    <div class="w-[3px] bg-gold rounded-full flex-shrink-0 hidden sm:block opacity-0" aria-hidden="true"></div>
                 </div>
-                <div class="bg-site-card border border-site-border border-l-[3px] border-l-gold p-8 rounded-md shadow-lg text-center md:text-left h-full flex flex-col">
-                    <div class="text-gold tracking-widest text-lg mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="font-body text-site-text text-base leading-relaxed italic mb-6 flex-grow">"A melhor oficina do Batel. Transparência do início ao fim e mecânicos que realmente entendem do que estão falando."</p>
-                    <strong class="font-body font-semibold text-gold uppercase tracking-wide text-sm">Carlos S.</strong>
+                <div class="w-14 h-px bg-gold mx-auto mb-5" aria-hidden="true"></div>
+                <div class="flex flex-wrap justify-center items-center gap-x-2 gap-y-1 mb-2">
+                    <span class="font-display font-bold text-site-text text-base md:text-lg">EXCELENTE</span>
+                    <span class="text-gold tracking-widest text-lg md:text-xl" aria-hidden="true">★★★★★</span>
                 </div>
-                <div class="bg-site-card border border-site-border border-l-[3px] border-l-gold p-8 rounded-md shadow-lg text-center md:text-left h-full flex flex-col">
-                    <div class="text-gold tracking-widest text-lg mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="font-body text-site-text text-base leading-relaxed italic mb-6 flex-grow">"Serviço impecável. Fizeram a revisão completa do meu carro no prazo combinado. Ambiente premium e de muita confiança."</p>
-                    <strong class="font-body font-semibold text-gold uppercase tracking-wide text-sm">Mariana L.</strong>
-                </div>
+                <p class="font-body text-site-muted text-xs md:text-sm">Com base em 196 avaliações no Google</p>
             </div>
 
-            <div class="text-center space-y-5">
+            <div class="reviews-widget reviews-widget--dark" data-reviews-carousel role="region" aria-roledescription="carrossel" aria-label="Avaliações do Google">
+                <div class="reviews-widget__header">
+                    <div class="reviews-widget__google">
+                        <svg class="reviews-widget__google-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        Avaliações no Google
+                    </div>
+                    <div class="reviews-widget__score">
+                        <span class="reviews-widget__stars" aria-hidden="true">★★★★★</span>
+                        <span>4,5 · 196 avaliações</span>
+                    </div>
+                </div>
+                <div class="reviews-widget__viewport">
+                    <div class="reviews-widget__track"></div>
+                </div>
+                <div class="reviews-widget__footer">
+                    <button type="button" class="reviews-widget__btn reviews-widget__btn--prev" aria-label="Avaliação anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                    <div class="reviews-widget__dots"></div>
+                    <button type="button" class="reviews-widget__btn reviews-widget__btn--next" aria-label="Próxima avaliação"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+
+            <div class="text-center space-y-5 mt-10 md:mt-12">
                 <div>
                     <a href="https://wa.me/5541987065961?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20Agis%20Car%20Service%20Loja%20Batel%2C%20quero%20solicitar%20um%20atendimento%20para%20agendar%20um%20hor%C3%A1rio." target="_blank" class="inline-block font-body font-semibold text-xs uppercase tracking-wide bg-gold text-black px-8 py-4 rounded-md shadow-[0_0_24px_rgba(255,215,0,0.15)] hover:bg-gold-hover transition-all duration-300 wa-link" data-wa="Agendar um horário">Agendar um Horário <i class="fa-brands fa-whatsapp ml-2"></i></a>
                 </div>
                 <div>
-                    <a href="#" class="font-body text-gold text-sm font-semibold underline underline-offset-4 hover:text-gold-hover transition-colors duration-300">Ver avaliações no Google</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=AGIS+CAR+SERVICE+Curitiba" target="_blank" rel="noopener noreferrer" class="font-body text-gold text-sm font-semibold underline underline-offset-4 hover:text-gold-hover transition-colors duration-300">Ver avaliações no Google</a>
                 </div>
             </div>
         </div>
@@ -445,6 +458,8 @@
         <i class="fa-brands fa-whatsapp text-3xl text-white"></i>
     </a>
 
+    <script src="assets/site-config.js"></script>
+    <script src="assets/reviews-carousel.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
