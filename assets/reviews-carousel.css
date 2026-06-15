@@ -146,17 +146,17 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, background 0.2s ease;
-    background: #FFD700;
+    background: #FFA501;
     color: #000000;
 }
 
 .reviews-widget__btn:hover {
     transform: scale(1.05);
-    background: #FFE534;
+    background: #FFB833;
 }
 
 .reviews-widget__btn:focus-visible {
-    outline: 2px solid #FFD700;
+    outline: 2px solid #FFA501;
     outline-offset: 2px;
 }
 
@@ -173,7 +173,7 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    background: #FFD700;
+    background: #FFA501;
     opacity: 0.35;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
